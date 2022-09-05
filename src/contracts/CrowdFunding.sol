@@ -40,6 +40,12 @@ contract CrowdFunding{
      mapping(uint => Request) public requests;
 
      uint public numRequests;
+   
+
+    // adding events
+    event ContributeEvent(address _sender,uint _value);
+    event CreateRequestEvent(string _description,address _recipient,uint _value);
+    event makePaymentEvent(address _recipient, uint _value);
 
 
      // call function when someone wants to send money to the crowdfunding contract
@@ -54,6 +60,8 @@ contract CrowdFunding{
 
         contributors[msg.sender] += msg.value;
         raisedAmount += msg.value;
+
+        emit ContributeEvent(msg.sender, msg.value);
      }
 
 
@@ -90,11 +98,11 @@ contract CrowdFunding{
         }
      // creating a spending request
     
-    function CreateRequest(string memory _description,address payable _recepient,uint _value) public onlyAdmin{
+    function CreateRequest(string memory _description,address payable _recipient,uint _value) public onlyAdmin{
         // struct must be declare as storage bcz it contains nested mapping here
         // default of the numrequest is zero - so the request starts from index zero
          Request storage newRequest = requests[numRequests];
-         newRequest.receipient=_recepient;
+         newRequest.receipient=_recipient;
          newRequest.description= _description;
          newRequest.value= _value;
          newRequest.completed= false;
@@ -104,6 +112,9 @@ contract CrowdFunding{
 // and cant be initiaze with a constructore
       //  requests[numRequests] = Request(_description,_recepient,_value,false,0);
 
+
+
+     emit CreateRequestEvent(_description, _recipient, _value);
     }
 
   // Voting for a Request
@@ -126,6 +137,8 @@ contract CrowdFunding{
     require(thisRequest.noOfVoters>noOfContributors/2); // 50% voted fo this request
     thisRequest.receipient.transfer(thisRequest.value);
     thisRequest.completed=true;
+
+    emit makePaymentEvent(thisRequest.receipient, thisRequest.value);
    }
 
 
