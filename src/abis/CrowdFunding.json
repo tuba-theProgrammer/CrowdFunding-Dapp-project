@@ -1,0 +1,86 @@
+{
+  "contractName": "CrowdFunding",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.16+commit.07a7930e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/src/contracts/CrowdFunding.sol\":\"CrowdFunding\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/src/contracts/CrowdFunding.sol\":{\"keccak256\":\"0x73d8be5930656ccb1c5a3e2c35039aa78be29ffb571daf603d3cc165307426a0\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://a08a6e5d99b38f6392e4657c85218b18508e5b7d3c915930ffddfebc68052ff1\",\"dweb:/ipfs/QmZt2L3iMoDVLEmRswGKMpme6wBgcBVVacfV8FU1fJ243X\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea26469706673582212209c4cb16908937634f468cf0eb4c12753f78e5aac616aa000c5bb0d02d183c7d864736f6c63430008100033",
+  "deployedBytecode": "0x6080604052600080fdfea26469706673582212209c4cb16908937634f468cf0eb4c12753f78e5aac616aa000c5bb0d02d183c7d864736f6c63430008100033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "70:29:0:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "70:29:0:-:0;;;;;",
+  "source": "\n// SPDX-License-Identifier: GPL-3.0\npragma solidity >=0.7.0 <0.9.0;\n\ncontract CrowdFunding{\n    \n}",
+  "sourcePath": "/home/tuba/Work-Folder/BlockChain-Developement/CrowdFunding-Dapp-project/src/contracts/CrowdFunding.sol",
+  "ast": {
+    "absolutePath": "project:/src/contracts/CrowdFunding.sol",
+    "exportedSymbols": {
+      "CrowdFunding": [
+        2
+      ]
+    },
+    "id": 3,
+    "license": "GPL-3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.7",
+          ".0",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "37:31:0"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "CrowdFunding",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 2,
+        "linearizedBaseContracts": [
+          2
+        ],
+        "name": "CrowdFunding",
+        "nameLocation": "79:12:0",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 3,
+        "src": "70:29:0",
+        "usedErrors": []
+      }
+    ],
+    "src": "37:62:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.16+commit.07a7930e.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x9e1e8f97905305AE5e051622997725AED9Bf4013",
+      "transactionHash": "0x34215c8d25d469da3835a542e0eedf16d5651748b1d2324d170e3f82c824e5e3"
+    }
+  },
+  "schemaVersion": "3.4.9",
+  "updatedAt": "2022-09-05T09:48:13.097Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
