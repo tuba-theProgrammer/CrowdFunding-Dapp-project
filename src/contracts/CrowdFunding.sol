@@ -46,4 +46,19 @@ contract CrowdFunding{
         return address(this).balance;
      }
 
+
+     // getting the refund- function
+     
+     function getRefund() public{
+    
+    require(block.timestamp> deadline && raisedAmount < goal);
+    require(contributors[msg.sender]>0);
+
+     address payable recipeint = payable(msg.sender);
+     uint value = contributors[msg.sender];
+     recipeint.transfer(value);
+      
+      contributors[msg.sender] = 0;
+     }
+
 }
