@@ -117,5 +117,17 @@ contract CrowdFunding{
      thisRequest.noOfVoters++;
    }
 
+   // making the payment - call by admin to tranfer the money
+   
+   function makePayment(uint _requestNo) public onlyAdmin{
+    require(raisedAmount>=goal);
+    Request storage thisRequest = requests[_requestNo];
+    require(thisRequest.completed==false,"This request has been completed");
+    require(thisRequest.noOfVoters>noOfContributors/2); // 50% voted fo this request
+    thisRequest.receipient.transfer(thisRequest.value);
+    thisRequest.completed=true;
+   }
+
+
 
 }
